@@ -66,7 +66,7 @@ export default class ChatListScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.mainContainer}>
         <SearchBar
           lightTheme
           icon={{ type: "font-awesome", name: "search" }}
@@ -85,6 +85,9 @@ export default class ChatListScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  mainContainer:{
+    flex:1
+  },
   listContainerStyle: {
     flex: 1
   }

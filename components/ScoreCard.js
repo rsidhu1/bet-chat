@@ -2,71 +2,14 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { Card, Divider } from "react-native-elements";
 
-const games = [
-  {
-    game: {
-      team1: "New England",
-      avatar1: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score1: 1,
-      team2: "Kansas City",
-      avatar2: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score2: 2,
-      id: 1
-    }
-  },
-  {
-    game: {
-      team1: "New England",
-      avatar1: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score1: 1,
-      team2: "Kansas City",
-      avatar2: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score2: 2,
-      id: 2
-    }
-  },
-  {
-    game: {
-      team1: "New England",
-      avatar1: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score1: 1,
-      team2: "Kansas City",
-      avatar2: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score2: 2,
-      id: 3
-    }
-  },
-  {
-    game: {
-      team1: "New England",
-      avatar1: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score1: 1,
-      team2: "Kansas City",
-      avatar2: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score2: 2,
-      id: 4
-    }
-  },
-  {
-    game: {
-      team1: "New England",
-      avatar1: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score1: 1,
-      team2: "Kansas City",
-      avatar2: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      score2: 2,
-      id: 5
-    }
-  },
-  
-];
-
 export default class ScoreCard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   render() {
-    return <View style={styles.container}>{this.renderScoreCard(games)}</View>;
+    const { data } = this.props;
+
+    return <View style={styles.container}>{this.renderScoreCard(data)}</View>;
   }
 
   renderScoreCard(games) {
